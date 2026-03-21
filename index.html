@@ -257,6 +257,41 @@
     }
     .contact-link:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
+    /* ── AWS SERVICES ── */
+    .aws-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .aws-category {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      transition: border-color .2s, transform .2s;
+    }
+    .aws-category:hover { border-color: #f90; transform: translateY(-2px); }
+    .aws-category-title {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .78rem;
+      color: #f90;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: .8rem;
+      font-weight: 600;
+    }
+    .aws-category-title svg { flex-shrink: 0; }
+    .aws-services { display: flex; flex-wrap: wrap; gap: .4rem; }
+    .aws-tag {
+      font-family: 'Fira Code', monospace;
+      font-size: .78rem;
+      padding: .2rem .6rem;
+      border-radius: 4px;
+      background: rgba(255,153,0,.1);
+      color: #ffb347;
+      border: 1px solid rgba(255,153,0,.2);
+    }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -282,6 +317,7 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#aws">AWS</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -383,9 +419,125 @@
   </div>
 </section>
 
+<!-- AWS SERVICES -->
+<section id="aws">
+  <div class="section-label">// 03. aws cloud</div>
+  <h2>AWS Cloud Services</h2>
+  <div class="aws-grid">
+
+    <div class="aws-category">
+      <div class="aws-category-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#f90"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4" stroke="#f90" stroke-width="2" fill="none"/></svg>
+        Compute
+      </div>
+      <div class="aws-services">
+        <span class="aws-tag">EC2</span>
+        <span class="aws-tag">Lambda</span>
+        <span class="aws-tag">ECS</span>
+        <span class="aws-tag">EKS</span>
+        <span class="aws-tag">Auto Scaling</span>
+      </div>
+    </div>
+
+    <div class="aws-category">
+      <div class="aws-category-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f90" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        Storage
+      </div>
+      <div class="aws-services">
+        <span class="aws-tag">S3</span>
+        <span class="aws-tag">EBS</span>
+        <span class="aws-tag">EFS</span>
+        <span class="aws-tag">Glacier</span>
+      </div>
+    </div>
+
+    <div class="aws-category">
+      <div class="aws-category-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f90" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        Networking
+      </div>
+      <div class="aws-services">
+        <span class="aws-tag">VPC</span>
+        <span class="aws-tag">Subnets</span>
+        <span class="aws-tag">Route 53</span>
+        <span class="aws-tag">ELB / ALB</span>
+        <span class="aws-tag">CloudFront</span>
+        <span class="aws-tag">NAT Gateway</span>
+      </div>
+    </div>
+
+    <div class="aws-category">
+      <div class="aws-category-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f90" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Security &amp; IAM
+      </div>
+      <div class="aws-services">
+        <span class="aws-tag">IAM</span>
+        <span class="aws-tag">IAM Roles</span>
+        <span class="aws-tag">IAM Policies</span>
+        <span class="aws-tag">Security Groups</span>
+        <span class="aws-tag">Secrets Manager</span>
+      </div>
+    </div>
+
+    <div class="aws-category">
+      <div class="aws-category-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f90" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        Databases
+      </div>
+      <div class="aws-services">
+        <span class="aws-tag">RDS</span>
+        <span class="aws-tag">DynamoDB</span>
+        <span class="aws-tag">Aurora</span>
+        <span class="aws-tag">ElastiCache</span>
+      </div>
+    </div>
+
+    <div class="aws-category">
+      <div class="aws-category-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f90" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Monitoring
+      </div>
+      <div class="aws-services">
+        <span class="aws-tag">CloudWatch</span>
+        <span class="aws-tag">CloudTrail</span>
+        <span class="aws-tag">AWS Config</span>
+        <span class="aws-tag">Cost Explorer</span>
+      </div>
+    </div>
+
+    <div class="aws-category">
+      <div class="aws-category-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f90" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        DevOps &amp; CI/CD
+      </div>
+      <div class="aws-services">
+        <span class="aws-tag">CodePipeline</span>
+        <span class="aws-tag">CodeBuild</span>
+        <span class="aws-tag">CodeDeploy</span>
+        <span class="aws-tag">ECR</span>
+      </div>
+    </div>
+
+    <div class="aws-category">
+      <div class="aws-category-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f90" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"/><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"/><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"/></svg>
+        Messaging
+      </div>
+      <div class="aws-services">
+        <span class="aws-tag">SNS</span>
+        <span class="aws-tag">SQS</span>
+        <span class="aws-tag">SES</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- PROJECTS -->
 <section id="projects">
-  <div class="section-label">// 03. projects</div>
+  <div class="section-label">// 04. projects</div>
   <h2>Featured Projects</h2>
   <div class="projects-grid">
 
@@ -442,7 +594,7 @@
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-label">// 04. contact</div>
+  <div class="section-label">// 05. contact</div>
   <h2>Get In Touch</h2>
   <div class="contact-card">
     <p>I'm currently open to DevOps, Platform Engineering, and Cloud Infrastructure roles. Feel free to reach out!</p>
